@@ -83,10 +83,20 @@ class App extends Component {
     })
   }
   render(){
+   // console.log(this.props.user)
   return (
     <div className="container-fluid">
       <div className ="row">
-        <div className="col-sm-8 col-sm-offset-2">
+        <div className="col-sm-2 text-center">
+          <img 
+           src={this.props.user.photoURL}
+           height="100px"
+           className="img img-responsive circle"
+           style={{padding:'20px'}}
+          />
+          <h4 className="username">Welcome back,<b>{this.props.user.displayName}</b></h4>
+        </div>
+        <div className="col-sm-10">
           <form onSubmit = {this.handleSubmit}>
             <div className="form-group">
               <input 

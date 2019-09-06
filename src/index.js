@@ -15,6 +15,7 @@ import LoadingComponent from './Components/LoadingComponent'
 import AuthenticationComponent from './Components/AuthenticationComponent'
 import NoteDetail from './Components/noteDetail'
 import NoteEdit from './Components/NoteEdit'
+import './Styles/index.css'
 // create redux store > reducers > actions > applyMiddleware
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 

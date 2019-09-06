@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import {getUser} from '../actions/userAction'
 import {getNotes} from '../actions/notesAction'
+import Loading from './Loading'
 
 class LoadingComponent extends Component {
     componentDidMount(){
@@ -25,11 +26,8 @@ class LoadingComponent extends Component {
         if( (!userLoading && !notesLoading) || this.props.user === null){
             return <div>{children}</div>
         } else{
-            return(
-                <div>
-                    <h2>Loading...</h2>
-                </div>
-            )
+            return  <Loading/>
+            
         }
     }
 }
